@@ -64,14 +64,114 @@ class Person {
     }
 }
 
-let elon = new Person();
+// let elon = new Person();
 // console.log(elon);
-console.log(elon.getName());
-console.log(elon.getAge());
-console.log(elon.getWeight());
-elon.greet("Bill Gates");
-elon.eat();
-elon.exercise();
-elon.ageUp();
-elon.buyHamster(hampy);
-console.log(elon);
+// console.log(elon.getName());
+// console.log(elon.getAge());
+// console.log(elon.getWeight());
+// elon.greet("Bill Gates");
+// elon.eat();
+// elon.exercise();
+// elon.ageUp();
+// elon.buyHamster(hampy);
+// console.log(elon);
+
+// ========== STORY WITH PERSON CLASS ========== \\
+
+let timmy = new Person("Timmy", 5, 48/*inches*/, 70, 0, 0, 0);
+// timmy.eat();
+// timmy.eat();
+// timmy.eat();
+// timmy.eat();
+// timmy.eat();
+for(let i = 0; i < 5; i++){
+    timmy.eat();
+}
+
+// timmy.exercise();
+// timmy.exercise();
+// timmy.exercise();
+// timmy.exercise();
+// timmy.exercise();
+for(let i = 0; i < 5; i++){
+    timmy.exercise();
+}
+
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+for(let i = 0; i < 9; i++){
+    timmy.ageUp();
+}
+
+let gus = new Hamster("Timmy", "Gus")
+
+timmy.buyHamster(gus);
+
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+// timmy.ageUp();
+for(let i = 0; i < 15; i++){
+    timmy.ageUp();
+}
+
+// timmy.eat();
+// timmy.eat();
+for(let i = 0; i < 2; i++){
+    timmy.eat();
+}
+
+// timmy.exercise();
+// timmy.exercise();
+for(let i = 0; i < 2; i++){
+    timmy.exercise();
+}
+
+// console.log(timmy);
+
+// ========== CHEF MAKE DINNERS ========== \\
+
+class Dinner {
+    constructor(appetizer, entrees, dessert){
+        this.appetizer = appetizer,
+        this.entrees = entrees,
+        this.dessert = dessert
+    }
+}
+
+class Factory {
+    constructor(name, restaurant){
+        this.name = name,
+        this.restaurant = restaurant
+    }
+    newDinner(dinner){
+        return (`Voila! The house specialty, ${dinner}!`);
+    }
+}
+
+const gordonRamsey = new Factory("Gordon Ramsey", "Gordon Ramsey Steak");
+let steak = new Dinner("salad", "steak and potatoes", "lava cake");
+let fish = new Dinner("chardonnay", "swordfish", "bread pudding");
+let pasta = new Dinner("salad", "chicken parm", "baked alaska");
+
+console.log(gordonRamsey.newDinner(steak));
+console.log(gordonRamsey.newDinner(fish));
+console.log(gordonRamsey.newDinner(pasta));
