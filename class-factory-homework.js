@@ -163,7 +163,7 @@ class Factory {
         this.restaurant = restaurant
     }
     newDinner(dinner){
-        return (`Voila! The house specialty, ${dinner}!`);
+        return (`Voila! The house specialty: ${dinner.appetizer}, ${dinner.entrees}, ${dinner.dessert}!`);
     }
 }
 
